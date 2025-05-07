@@ -26,3 +26,51 @@ System.debug('Addition: ' + SimpleCalculator.add(10, 5));
 System.debug('Subtraction: ' + SimpleCalculator.subtract(10, 5));
 System.debug('Multiplication: ' + SimpleCalculator.multiply(10, 5));
 System.debug('Division: ' + SimpleCalculator.divide(10, 5));
+
+
+
+
+public class ApexCalculator {
+    // Member variable
+    public Double myValue = 0;
+
+    // Method to multiply two Decimals (Decimal = Double in Apex)
+    public Decimal multiplyNumbers(Decimal a, Decimal b) {
+        return a * b;
+    }
+
+    // Overloaded method to multiply two Integers
+    public Decimal multiplyNumbers(Integer a, Integer b) {
+        return a * b;
+    }
+}
+
+
+
+ApexCalculator calc = new ApexCalculator();
+Decimal result1 = calc.multiplyNumbers(8.0, 9.0);  // Decimal
+Decimal result2 = calc.multiplyNumbers(8, 9);      // Integer
+
+System.debug('Result1: ' + result1);  // 72
+System.debug('Result2: ' + result2);  // 72
+
+
+
+
+
+
+
+
+public class Prac3 {
+    public Double myValue = 0;
+    public Double getUpdatedValue(){
+        myValue = myValue+10;
+        return myValue;
+    }
+}
+
+
+
+prac3 m= new prac3();
+Double myValue=m.getUpdatedvalue();
+system.debug('valued='+myValue);
