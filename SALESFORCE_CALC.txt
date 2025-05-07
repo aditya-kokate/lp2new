@@ -1,0 +1,28 @@
+public class SimpleCalculator {
+    
+    public static Integer add(Integer a, Integer b) {
+        return a + b;
+    }
+
+    public static Integer subtract(Integer a, Integer b) {
+        return a - b;
+    }
+
+    public static Integer multiply(Integer a, Integer b) {
+        return a * b;
+    }
+
+    public static Double divide(Integer a, Integer b) {
+        if (b == 0) {
+            System.debug('Cannot divide by zero');
+            return null;
+        }
+        return a / (Double)b;
+    }
+}
+
+
+System.debug('Addition: ' + SimpleCalculator.add(10, 5));
+System.debug('Subtraction: ' + SimpleCalculator.subtract(10, 5));
+System.debug('Multiplication: ' + SimpleCalculator.multiply(10, 5));
+System.debug('Division: ' + SimpleCalculator.divide(10, 5));
